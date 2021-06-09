@@ -6,7 +6,7 @@ TEXMFSYSCONFIG ./texmf-config
 TEXMFLOCAL ./texmf-local
 TEXMFSYSVAR ./texmf-var
 
-option_doc 0
+option_doc 1
 option_src 0
 option_autobackup 0
 

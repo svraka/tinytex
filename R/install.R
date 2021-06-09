@@ -152,7 +152,7 @@ install_tinytex_source = function(repo = '', dir, version, add_path, extra_packa
     Sys.setenv(CTAN_REPO = repo)
     on.exit(Sys.unsetenv('CTAN_REPO'), add = TRUE)
   }
-  download_file('https://yihui.org/gh/tinytex/tools/install-unx.sh')
+  download_file('https://raw.githubusercontent.com/svraka/tinytex/with-documentation/tools/install-unx.sh')
   res = system2('sh', c(
     'install-unx.sh', if (repo != 'ctan') c('--no-admin', '--path', shQuote(repo))
   ))
@@ -316,7 +316,7 @@ download_file = function(...) {
 
 # LaTeX packages that I use
 install_yihui_pkgs = function() {
-  pkgs = readLines('https://yihui.org/gh/tinytex/tools/pkgs-yihui.txt')
+  pkgs = readLines('https://raw.githubusercontent.com/svraka/tinytex/with-documentation/tools/pkgs-yihui.txt')
   tlmgr_install(pkgs)
 }
 
